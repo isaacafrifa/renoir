@@ -1,0 +1,33 @@
+.page-centered {
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  
+  .link {
+    color: black;
+    text-shadow: 1px 1px 1px #35e888;
+  }
+  
+  .link:hover {
+    text-decoration: none;
+    color: #35e888;
+  }
+  
+  
+  /* Laptops 1024+ */
+  @media screen and (min-width: 1024px) {
+    .description {
+      font-size: 1.4rem;
+    }
+    .link {
+      font-size: 1.2rem;
+    }
+  }
