@@ -2,7 +2,8 @@
 :root {
   --backgroundColor: white;
   --primaryTextColor: #242424;
-  --linkColor: #0563bb;
+  --linkColor: #717679;
+  --accentColor: rgb(17, 138, 80);
   }
 
 /* My Breakpoints */
