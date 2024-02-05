@@ -11,8 +11,9 @@ const Home = () => {
           <div>
             <div className="bg"></div>
             <div className="bg-text">
-              <h1>Renoir</h1>
-              <p>
+              
+              <h1 className="animate__animated animate__fadeInDown">Renoir</h1>
+              <p className="animate__animated animate__fadeInDown">
                 Renoir is an afro-french restaurant that serves authentic and
                 delicious local and continental dishes.
               </p>
