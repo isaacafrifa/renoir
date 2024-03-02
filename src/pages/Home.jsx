@@ -1,12 +1,9 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "../assets/css/home.css";
 
 const Home = () => {
   return (
-    <div className="bg">
-      <div className="bg-text">
+    <div className="background-container">
+      <div className="text-overlay">
         <h1 className="animate__animated animate__fadeInDown">Renoir</h1>
         <p className="animate__animated animate__fadeInDown">
           Renoir is an afro-french restaurant that serves authentic and
