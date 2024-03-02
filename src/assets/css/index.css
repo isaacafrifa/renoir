@@ -2,7 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #000000; */
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.2;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -15,30 +30,6 @@ a:hover {
   text-decoration: none;
   color: var(--primaryTextColor);
   transform: scale(1.1);
-}
-
-html {
-  scroll-behavior: smooth;
-  line-height: 1.2;
-}
-
-body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-
-  color-scheme: light dark;
-  color: var(--primaryTextColor);
-  background-color: var(--backgroundColor);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  text-align: center;
-  overflow-x: hidden;
-  height: 100%;
-  width: 100%;
 }
 
 h1 {
@@ -92,130 +83,4 @@ h1 {
   text-shadow: 2px 2px 2px #000000;
   font-size: 3rem;
   font-weight: 600;
-}
-
-
-/*--------------------------------------------------------------
-                  # ANIMATIONS
---------------------------------------------------------------*/
-
-@keyframes reveal {
-  80% {
-    letter-spacing: 3px;
-  }
-
-  100% {
-    background-size: 220% 220%;
-  }
-}
-
-@keyframes flicker {
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow: 0.2rem 0.2rem 1rem #fff,
-      0 0 1rem #18d26e;
-  }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-    box-shadow: none;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-
-@keyframes updown {
-
-  50% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes movebtn {
-  0% {
-    transform: translateY(0px);
-  }
-
-  25% {
-    transform: translateY(20px);
-  }
-
-  50% {
-    transform: translateY(0px);
-  }
-
-  75% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0.5;
-  }
 }
