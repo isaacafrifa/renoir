@@ -1,7 +1,6 @@
 .page-container .address-card {
     padding: 1rem;
     border: 1px solid #ddd;
-    /* background-color: rgb(245, 239, 239); */
     border-radius: 5px;
   }
   
@@ -142,7 +141,7 @@ label.fcf-label .asterisks {
 @media only screen and (min-width: 1024px) {
 
     .page-container .address-card {
-       min-height: 46vh;
+       height: 46vh;
       }
 
     .card-content {

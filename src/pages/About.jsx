@@ -7,16 +7,15 @@ import Table from "react-bootstrap/Table";
 const About = () => {
   return (
     <div className="page-container">
+      <div className="page-banner">
+        <div className="banner-text">
+          <h1 className="animate__animated animate__fadeInDown">Our Story</h1>
+        </div>
+      </div>
+
       <Container fluid>
         <Row>
-          <Col md={12}>
-            <div className="page-banner">
-              <div className="banner-text">
-                <h1 className="animate__animated animate__fadeInDown">Our Story</h1>
-              </div>
-            </div>
-          </Col>
-          <Col md={6} lg={{ span: 6, offset: 3 }}>
+          <Col md={12} lg={{ span: 6, offset: 3 }}>
             <div className="about-us">
               <p className="animate__animated animate__fadeInDown">
                 Welcome to Renoir, Celebrating the Rich and Diverse Flavours of
@@ -30,9 +29,13 @@ const About = () => {
                 culinary traditions of Africa.
               </p>
               <div className="mt-5 text-center">
-                <h2 className="animate__animated animate__fadeInDown animate__slow">Working hours</h2>
+                <h2 className="animate__animated animate__fadeInDown animate__slow">
+                  Working hours
+                </h2>
 
-                <Table responsive className="animate__animated animate__fadeInDown animate__slow">
+                <Table
+                  responsive
+                  className="animate__animated animate__fadeInDown animate__slow">
                   <tbody>
                     <tr>
                       <td>Monday to Saturday</td>
