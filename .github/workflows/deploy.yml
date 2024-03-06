@@ -1,0 +1,46 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [ main ]
+    # Prevent running the entire workflow when changes are made to the README.md
+    paths-ignore:
+        - 'README.md'
+
+        
+jobs:
+  build:
+    # This job focuses on building the production-ready version of the application.
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+        # Download the code from the GitHub repository
+        - name: Checkout repo
+          uses: actions/checkout@v4
+  
+       # Set up a Node.js environment (version 18) and caches dependencies for efficiency.
+        - name: Setup Node
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+            cache: 'npm'
+  
+        - name: Install dependencies
+          run: npm install
+  
+        - name: Build project
+          run: npm run build
+        #   Upload production-ready built files as an artifac
+        - name: Upload production-ready built files
+          uses: actions/upload-artifact@v4
+          with:
+            # Upload dist directory
+            name: production-files
+            path: ./dist
+
+#   deploy:
+#     name: Deploy
+#     needs: build
+
+    
