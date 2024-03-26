@@ -9,9 +9,9 @@ on:
 
 
 jobs:
-  build:
+  build_deploy:
     # This job focuses on building the production-ready version of the application.
-    name: Build
+    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -32,15 +32,6 @@ jobs:
         - name: Build project
           run: npm run build
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    # Only run if the triggering branch is refs/heads/main, ensuring deployments only happen from the main branch.
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-        # Deploy to your Netlify.
         - name: Deploy to Netlify Account
           uses: jsmrcaga/action-netlify-deploy@master
           with:
