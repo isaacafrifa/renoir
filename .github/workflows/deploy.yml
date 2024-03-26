@@ -19,11 +19,11 @@ jobs:
         - name: Checkout repo
           uses: actions/checkout@v4
   
-       # Set up a Node.js environment (version 18) and caches dependencies for efficiency.
+       # Set up a Node.js environment (version 20) and caches dependencies for efficiency.
         - name: Setup Node
           uses: actions/setup-node@v4
           with:
-            node-version: 18
+            node-version: 20
             cache: 'npm'
   
         - name: Install dependencies
@@ -38,5 +38,5 @@ jobs:
             build_directory: './dist'
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN_SECRET }}
             NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-            NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
+            NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub Actions as version: ${{ github.event.head_commit.id}}"
             NETLIFY_DEPLOY_TO_PROD: true
