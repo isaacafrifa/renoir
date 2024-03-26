@@ -21,7 +21,7 @@ jobs:
   
        # Set up a Node.js environment (version 18) and caches dependencies for efficiency.
         - name: Setup Node
-          uses: actions/setup-node@v3
+          uses: actions/setup-node@v4
           with:
             node-version: 18
             cache: 'npm'
@@ -44,7 +44,8 @@ jobs:
         - name: Deploy to Netlify Account
           uses: jsmrcaga/action-netlify-deploy@master
           with:
+            build_directory: './dist'
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN_SECRET }}
             NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-            NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
+            NETLIFY_DEPLOY_MESSAGE: "Deploying to production on branch $GITHUB_REF with v${{ github.event.head_commit.message }"
             NETLIFY_DEPLOY_TO_PROD: true
