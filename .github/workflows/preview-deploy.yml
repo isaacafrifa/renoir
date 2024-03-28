@@ -1,0 +1,35 @@
+name: 'Netlify Preview Deploy'
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+
+jobs:
+  build_deploy_preview:
+    name: 'Preview Deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      # Download the code from the GitHub repository
+      - name: Checkout repo
+        uses: actions/checkout@v4
+    # Set up a Node.js environment (version 20) and caches dependencies for efficiency.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build      
+
+      - name: Deploy to Netlify
+        uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          build_directory: './dist'
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN_SECRET }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Deploy preview: Pull Request #${{ github.event.number }}"
