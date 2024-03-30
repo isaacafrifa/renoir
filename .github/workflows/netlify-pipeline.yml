@@ -1,4 +1,4 @@
-name: Deploy to Netlify
+name: CI & CD to Netlify
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
         - name: Build project
           run: npm run build
 
-        - name: Deploy to Netlify Account
+        - name: Deploy to Netlify
           uses: jsmrcaga/action-netlify-deploy@master
           with:
             build_directory: './dist'

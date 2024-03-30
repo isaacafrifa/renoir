@@ -1,20 +1,25 @@
-name: 'Netlify Preview Deploy'
+name: 'PR Preview'
 
 on:
   pull_request:
     types: ['opened', 'edited', 'synchronize']
+    # Prevent running the entire workflow when changes are made to the README.md
+    paths-ignore:
+      - 'README.md'
 
 jobs:
-  build_deploy_preview:
-    name: 'Preview Deploy'
+  build-and-deploy-preview:
+    # This job focuses on building the application and deploying a preview to Netlify.
+    name: Build & Deploy Preview
     runs-on: ubuntu-latest
 
     steps:
       # Download the code from the GitHub repository
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
-    # Set up a Node.js environment (version 20) and caches dependencies for efficiency.
-      - name: Setup Node
+
+      # Set up a Node.js environment (version 20) and caches dependencies for efficiency.
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -24,9 +29,9 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build      
+        run: npm run build
 
-      - name: Deploy to Netlify
+      - name: Deploy Preview to Netlify
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           build_directory: './dist'
