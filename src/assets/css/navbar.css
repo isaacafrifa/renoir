@@ -25,13 +25,23 @@
   .navbar {
     font-size: 1.2rem;
   }
-  .active{
+
+  .active {
     color: var(--accentColor);
   }
 }
 
 @media only screen and (min-width: 1024px) {
-.navbar{
-  background-color: transparent;
-}
+
+  a:hover {
+    transform: scale(1.1);
+  }
+
+  .navbar {
+    background-color: transparent;
+  }
+
+  .nav-links {
+    color: white;
+  }
 }
