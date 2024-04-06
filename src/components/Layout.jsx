@@ -10,7 +10,7 @@ export default function Layout() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-body-tertiary"
+        className="navbar"
         fixed="top">
         <Container>
           <Navbar.Brand href="/">Renoir</Navbar.Brand>
