@@ -4,20 +4,34 @@
 .navbar {
   width: 100vw;
   font-size: 1rem;
-  text-shadow: 1px 1px 1px #000000;
-  font-weight: bolder;
+  font-weight: 900;
   background-color: var(--backgroundColor);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-links {
   margin: 1rem;
   text-decoration: none;
   color: var(--linkColor);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .active {
   color: var(--accentColor);
   border-radius: 0 0.7rem;
-  box-shadow: 0 -2px 2px var(--primaryColor), 0 2px 2px var(--primaryColor);
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+  .active{
+    color: var(--accentColor);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+.navbar{
+  background-color: transparent;
+}
 }
