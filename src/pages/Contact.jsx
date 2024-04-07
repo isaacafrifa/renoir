@@ -14,7 +14,7 @@ import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="page-container">
+    <>
       <div className="page-banner">
         <div className="banner-text">
           <h1 className="animate__animated animate__fadeInDown">Contact Us</h1>
@@ -24,8 +24,8 @@ const Contact = () => {
       <Container fluid>
         <Row>
           <Col md={6}>
-            <Card className="address-card">
-              <div className="text-md-end card-content">
+            <Card style={{border: "0px solid #892a2a"}} className="address-card">
+              <div className="text-md-center card-content">
                 <p className="animate__animated animate__fadeInDown">
                   <ClockFill color="green" />{" "}
                   Mon to Sat: 12pm to 10pm
@@ -58,7 +58,7 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

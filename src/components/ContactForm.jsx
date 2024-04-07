@@ -32,9 +32,7 @@ export default function ContactForm() {
 
   return (
 
-    
     <div className="contact-form-card">
-      
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
 
         <div className="fcf-form-group animate__animated animate__fadeInDown">
@@ -92,7 +90,7 @@ export default function ContactForm() {
                                 <Button type="submit" id="fcf-button"
                                 variant="outline-success"
                                 className="animate__animated animate__fadeInDown">
-                                    {isLoading ? 'Loading…' : 'Send Message'}
+                                    {isLoading ? 'Loading…' : 'Send'}
                                 </Button>
                             </div>
       </form>
