@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../assets/css/navbar.css";
-import logo from "../assets/images/navbar-brand.svg"
+import logo from "../../public/brand.svg"
 
 export default function Layout() {
   return (

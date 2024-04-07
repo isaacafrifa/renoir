@@ -48,10 +48,6 @@ h1 {
   margin: 0;
 }
 
-.page-container {
-  margin-top: 2rem;
-}
-
 
 /*--------------------------------------------------------------
                   # FULL PAGE  
@@ -64,13 +60,14 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/hero.jpg");
 }
 
 
 .text-overlay {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -101,20 +98,20 @@ h1 {
                   # BANNER  
 --------------------------------------------------------------*/
 .page-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/about-banner.jpg");
-  /* Half height */
+   /* Half height */
   height: 50vh;
   width: 100vw;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/hero.jpg");
 }
 
 .banner-text {
   color: white;
   position: relative;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
