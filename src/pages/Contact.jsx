@@ -11,6 +11,7 @@ import {
   TelephoneFill,
 } from "react-bootstrap-icons";
 import ContactForm from "../components/ContactForm";
+// import GenericCard from "../components/GenericCard";
 
 const Contact = () => {
   return (
@@ -24,6 +25,7 @@ const Contact = () => {
       <Container fluid>
         <Row>
           <Col md={6}>
+            {/* <GenericCard /> */}
             <Card style={{border: "0px solid #892a2a"}} className="address-card">
               <div className="text-md-center card-content">
                 <p className="animate__animated animate__fadeInDown">
