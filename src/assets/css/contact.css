@@ -1,21 +1,11 @@
-.address-card {
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.address-card p {
-    margin-bottom: 1rem;
-}
-
-.card-content,
 .contact-form-card {
     margin: 1.5rem 0rem;
-}
+} 
 
 .icon-box {
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(18px);
     position: relative;
-    color: var(--linkColor);
+    color: var(--backgroundColor);
     font-size: 24px;
     height: 40px;
     width: 40px;
@@ -31,7 +21,6 @@
     -webkit-box-shadow: 0 0 5px rgb(4, 37, 1);
     -moz-box-shadow: 0 0 5px rgb(4, 37, 1);
     box-shadow: 0 0 5px rgb(4, 37, 1);
-    border-radius: 20px;
 }
 
 .icon-box:hover {
@@ -140,10 +129,6 @@ label.fcf-label .asterisks {
 
 
 @media only screen and (min-width: 1024px) {
-
-    .card-content {
-        margin: 3rem 0rem;
-    }
 
     .fcf-input-group {
         width: 60%;
