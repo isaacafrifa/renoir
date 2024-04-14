@@ -1,5 +1,6 @@
 import "../assets/css/menu.css"
 import { Button } from "react-bootstrap";
+import { RENOIR_MENU_URL } from "../constants/urls";
 
 const Menu = () => {
   return (
@@ -12,7 +13,7 @@ const Menu = () => {
           From savoury dishes to fresh juice, our menu celebrates the 
           diversity of food with an African touch.
         </p>
-        <Button href={process.env.RENOIR_MENU_URL}  variant="outline-success" className="btn animate__animated animate__fadeInDown animate__slow" target="_blank" rel="noopener noreferrer">
+        <Button href={RENOIR_MENU_URL}  variant="outline-success" className="btn animate__animated animate__fadeInDown animate__slow" target="_blank" rel="noopener noreferrer">
           View Menu
         </Button>
       </div>
