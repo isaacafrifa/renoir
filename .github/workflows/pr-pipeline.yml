@@ -29,7 +29,7 @@ jobs:
         run: npm install
 
       - name: Build project with environment variable
-        run: npm run build:${{ secrets.RENOIR_MENU_URL }}  # Pass secret as argument
+        run: echo "RENOIR_MENU_URL=${{ secrets.RENOIR_MENU_URL }}" && npm run build   # Pass secret as argument
 
       - name: Deploy Preview to Netlify
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
