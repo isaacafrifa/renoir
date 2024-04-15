@@ -68,9 +68,13 @@ const Contact = () => {
         </Row>
 
         <Row>
-          <Col md={{ span: 6, offset: 3 }}>
+          {/* <Col md={{ span: 6, offset: 4 }}>
             <ContactForm />
-          </Col>
+          </Col> */}
+
+            <Col md={{ span:6, offset: 3}} >
+              <GenericCard />
+            </Col>
         </Row>
       </Container>
     </>
