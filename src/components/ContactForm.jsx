@@ -28,10 +28,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-card">
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className="form">
-        <p className="text-center">For reservations and other enquiries,</p>
-        <h5>send us a message</h5>
+    <form className="contact-card">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <p className="text-center animate__animated animate__fadeInDown">For reservations and other enquiries,</p>
+        <h5 className="animate__animated animate__fadeInDown">send us a message</h5>
 
         <div className="form-group animate__animated animate__fadeInDown">
           <label htmlFor="Name" className="form-label">
@@ -83,6 +83,6 @@ export default function ContactForm() {
           </Button>
         </div>
       </form>
-    </div>
+    </form>
   );
 }
