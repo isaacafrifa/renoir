@@ -1,6 +1,6 @@
 .contact-form-card {
     margin: 1.5rem 0rem;
-} 
+}
 
 .icon-box {
     backdrop-filter: blur(18px);
@@ -35,29 +35,42 @@
                   #     CONTACT FORM
 --------------------------------------------------------------*/
 .contact-card {
-    margin-top: 2rem;
+    margin: 2rem 0;
     width: 100%;
     /* height: 420px; */
     padding: 2rem;
-    border-radius: 2rem;
-    background: #e0e0e0;
+    border-radius: 1rem;
+    background: var(--backgroundColor);
     box-shadow: 15px 15px 30px #bebebe,
-      -15px -15px 30px #ffffff;
+        -15px -15px 30px #ffffff;
     color: var(--primaryTextColor);
     overflow: hidden;
+    /* text-align: center; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card .form,
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card h5 {
+    text-transform: uppercase;
+    padding-top: 0;
     text-align: center;
-  }
-  
-
-.contact-form-card {
-    padding: 1rem;
+    font-weight: bold;
 }
 
-.fcf-form-group {
+
+.form-group {
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
-.fcf-input-group {
+.form-input-group {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -68,7 +81,7 @@
     width: 100%;
 }
 
-.fcf-form-control {
+.form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + 0.75rem + 2px);
@@ -85,26 +98,26 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.fcf-form-control:focus {
+.form-control:focus {
     border: 1px solid var(--primaryColor);
 }
 
-textarea.fcf-form-control {
-    height: 10vh;
+textarea.form-control {
+    height: 12vh;
 }
 
-label.fcf-label {
+label.form-label {
     display: inline-block;
     margin-bottom: 0.5rem;
 }
 
-label.fcf-label .asterisks {
+label.form-label .asterisks {
     color: red;
 }
 
-#fcf-button {
+.form-group .form-button {
     display: inline-block;
-    font-weight: 400;
+    font-weight: bold;
     color: var(--accentColor);
     border: 1px solid var(--accentColor);
     line-height: 1.5;
@@ -112,17 +125,11 @@ label.fcf-label .asterisks {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .fcf-btn {
-        transition: none;
-    }
-}
 
-#fcf-button:hover {
+.form-button:hover {
     color: white;
     -ms-transform: scale(1.2);
     /* IE 9 */
@@ -131,10 +138,8 @@ label.fcf-label .asterisks {
     transform: scale(1.1);
 }
 
-.fcf-btn:focus,
-.fcf-btn.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.form-button:active {
+    scale: 0.95;
 }
 
 .form-error {
@@ -142,11 +147,23 @@ label.fcf-label .asterisks {
 }
 
 
-
 @media only screen and (min-width: 1024px) {
 
-    .fcf-input-group {
-        width: 60%;
+    .contact-card {
+        margin: 4rem 0;
+    }
+
+    .form-group .form-button {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        width: 20%;
+    }
+
+    .form-input-group {
+        width: 100%;
     }
 
 }

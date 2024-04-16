@@ -4,7 +4,7 @@
   height: 420px;
   padding: 2rem;
   border-radius: 2rem;
-  background: #e0e0e0;
+  background: var(--backgroundColor);
   box-shadow: 15px 15px 30px #bebebe,
     -15px -15px 30px #ffffff;
   color: var(--primaryTextColor);

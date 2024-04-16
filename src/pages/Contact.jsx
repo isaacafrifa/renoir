@@ -73,7 +73,7 @@ const Contact = () => {
           </Col> */}
 
             <Col md={{ span:6, offset: 3}} >
-              <GenericCard />
+              <ContactForm />
             </Col>
         </Row>
       </Container>
