@@ -2,7 +2,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../assets/css/contact.css";
-import { Clock,Facebook, Instagram, Pin, Telephone} from "react-bootstrap-icons";
+import {
+  Clock,
+  Facebook,
+  Instagram,
+  Pin,
+  Telephone,
+} from "react-bootstrap-icons";
 import ContactForm from "../components/ContactForm";
 import GenericCard from "../components/GenericCard";
 
@@ -51,7 +57,8 @@ const Contact = () => {
               key={link.title} // Add a unique key for each link
               className="icon-box animate__animated animate__fadeInDown"
               title={link.title}
-              href={link.href}>
+              href={link.href}
+            >
               {link.icon}
             </a>
           ))}
@@ -68,13 +75,9 @@ const Contact = () => {
         </Row>
 
         <Row>
-          {/* <Col md={{ span: 6, offset: 4 }}>
+          <Col md={{ span: 6, offset: 3 }}>
             <ContactForm />
-          </Col> */}
-
-            <Col md={{ span:6, offset: 3}} >
-              <ContactForm />
-            </Col>
+          </Col>
         </Row>
       </Container>
     </>

@@ -7,6 +7,7 @@
   font-weight: 900;
   background-color: var(--backgroundColor);
   background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid var(--linkColor);
 }
 
 .nav-links {
@@ -25,14 +26,17 @@
     font-size: 1.2rem;
   }
 
-  .active {
-    color: var(--accentColor);
-  }
 }
 
 @media only screen and (min-width: 1024px) {
+  .navbar {
+    border-bottom: 0;
+  }
+
   .navbar .active {
     color: var(--accentColor);
+    border-bottom: 1px solid var(--accentColor);
+    padding-bottom: 2px;
   }
 
   a:hover {
@@ -40,7 +44,7 @@
   }
 
   .navbar {
-    background-color: transparent;
+    background-color: rgba(29, 29, 29, 0.5);
   }
 
   .nav-links {
