@@ -47,9 +47,14 @@ export default function ContactForm() {
         phone: data.phone,
         message: data.message,
       };
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, messageParams, {
-        publicKey: USER_ID,
-      });
+      await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        messageParams, 
+        {
+        publicKey: import.meta.env.VITE_USER_ID,
+      }
+    );
       reset();
       toastifySuccess();
     } catch (err) {
