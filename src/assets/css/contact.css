@@ -139,9 +139,11 @@ label.form-label .asterisks {
     scale: 0.95;
 }
 
-.form-error {
-    color: var(--errorColor);
-}
+/* Honeypot styling */
+.verification {
+    display: none;
+  }
+  
 
 
 @media only screen and (min-width: 1024px) {
