@@ -3,11 +3,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../assets/css/about.css";
 import Table from "react-bootstrap/Table";
+import useShowBackground from "../hooks/useShowBackground";
 
 const About = () => {
+  const showBackground = useShowBackground();
+
   return (
     <>
-      <div className="page-banner">
+      <div className={showBackground ? "page-banner show" : "page-banner"}>
         <div className="banner-text">
           <h1 className="animate__animated animate__fadeInDown">Our Story</h1>
         </div>

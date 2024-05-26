@@ -1,10 +1,15 @@
 import "../assets/css/menu.css"
 import { Button } from "react-bootstrap";
 import { RENOIR_MENU_URL } from "../constants/urls";
+import useShowBackground from "../hooks/useShowBackground";
 
 const Menu = () => {
+  const showBackground = useShowBackground();
+
   return (
-    <div className="background-container">
+    <div className={
+      showBackground ? "background-container show" : "background-container"
+    }>
       <div className="text-overlay">
         <h1 className="animate__animated animate__fadeInDown">Menu</h1>
         <p className="animate__animated animate__fadeInDown">
